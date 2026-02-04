@@ -1,49 +1,106 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grid Generator — Купить лицензию</title>
     <style>
         body {
-            font-family:'Segoe UI', Tahoma, sans-serif;
-            background:#f4f7fa;
-            margin:0;
-            padding:0;
-            display:flex;
-            flex-direction:column;
-            align-items:center;
-            min-height:100vh;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background: #f4f7fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
         }
+
         header {
-            width:100%;
-            background:#007bff;
-            color:white;
-            padding:25px 0;
-            text-align:center;
-            box-shadow:0 3px 10px rgba(0,0,0,0.15);
+            width: 100%;
+            background: #007bff;
+            color: white;
+            padding: 25px 0;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
         }
-        header h1 { margin:0; font-size:2.2em; }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.2em;
+        }
+
         main {
-            max-width:620px;
-            width:92%;
-            background:white;
-            padding:35px;
-            margin:40px 0;
-            border-radius:12px;
-            box-shadow:0 6px 20px rgba(0,0,0,0.12);
+            max-width: 620px;
+            width: 92%;
+            background: white;
+            padding: 35px;
+            margin: 40px 0;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
         }
-        .description { font-size:1.05em; line-height:1.65; color:#444; margin-bottom:25px; }
-        .price { font-size:2em; color:#28a745; font-weight:700; margin:20px 0; }
-        label { display:block; margin:15px 0 6px; font-weight:600; color:#333; }
-        input { width:100%; padding:12px; border:1px solid #ccc; border-radius:6px; font-size:1em; }
-        button { width:100%; padding:15px; background:#007bff; color:white; border:none; border-radius:6px; font-size:1.15em; cursor:pointer; margin-top:20px; }
-        button:hover { background:#0056b3; }
-        #result { margin-top:25px; padding:18px; background:#f0f4f8; border-radius:8px; min-height:80px; text-align:center; }
+
+        .description {
+            font-size: 1.05em;
+            line-height: 1.65;
+            color: #444;
+            margin-bottom: 25px;
+        }
+
+        .price {
+            font-size: 2em;
+            color: #28a745;
+            font-weight: 700;
+            margin: 20px 0;
+        }
+
+        label {
+            display: block;
+            margin: 15px 0 6px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1em;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.15em;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        #result {
+            margin-top: 25px;
+            padding: 18px;
+            background: #f0f4f8;
+            border-radius: 8px;
+            min-height: 80px;
+            text-align: center;
+        }
     </style>
 </head>
+
 <body>
-    <header><h1>Grid Generator</h1></header>
+    <header>
+        <h1>Grid Generator</h1>
+    </header>
     <main>
         <div class="description">
             Мощный плагин для Autodesk Civil 3D<br>
@@ -74,7 +131,7 @@
             result.innerHTML = '<p>Создаём платёж...</p>';
 
             try {
-                const response = await fetch('create-payment.php', {
+                const response = await fetch('https://activation-server01.onrender.com/create-payment.php', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ email })
@@ -94,4 +151,5 @@
         });
     </script>
 </body>
+
 </html>
