@@ -97,7 +97,7 @@
             const email = document.getElementById('email').value;
 
             try {
-                const res = await fetch('/create-payment.php', {
+                const res = await fetch('https://activation-server01.onrender.com/create-payment.php', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ email })

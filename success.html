@@ -115,7 +115,7 @@
                 return;
             }
 
-            fetch(`/check-status.php?order_id=${orderId}`)
+            fetch(`https://activation-server01.onrender.com/check-status.php?order_id=${orderId}`)
                 .then(res => res.json())
                 .then(data => {
                     if (data.status === 'finished' && data.license_key) {
