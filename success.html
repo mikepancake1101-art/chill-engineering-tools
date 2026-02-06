@@ -133,6 +133,7 @@
         const orderId = urlParams.get('order_id');
         const productName = urlParams.get('n') || 'Plugin';
 
+        document.title = "Success: " + productName + " — Chill Engineering Tools";
         document.getElementById('productNameSuccess').textContent = productName;
 
         if (!orderId) {

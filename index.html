@@ -153,6 +153,7 @@
         const productName = urlParams.get('n') || 'Grid Generator';
         const price = urlParams.get('price') || '10';
 
+        document.title = productName + " — Chill Engineering Tools";
         document.getElementById('productDisplay').textContent = productName;
         document.getElementById('priceDisplay').textContent = '$' + price;
 
