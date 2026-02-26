@@ -136,8 +136,9 @@
 
             <div class="btn-group">
                 <a href="#buy" class="btn btn-primary" onclick="showPayment()">Buy Full Version ($10)</a>
-                <!-- Link to your hosted installer file -->
-                <a href="https://your-website.com/installer.exe" class="btn btn-secondary">Download Installer</a>
+                <!-- Link to Google Drive installer -->
+                <a href="https://drive.google.com/file/d/1_gqUC4HJJXoOsjs9pURYD7g9j6-WkfPI/view?usp=drive_link"
+                    class="btn btn-secondary" target="_blank">Download Installer</a>
             </div>
         </div>
 
@@ -155,6 +156,13 @@
             <h3 style="text-align: center;">Secure Checkout</h3>
             <p style="text-align: center; font-size: 0.9rem; color: #666;">Enter your email to receive the license key.
             </p>
+
+            <div
+                style="background-color: #fff3cd; color: #856404; padding: 10px; border-radius: 5px; margin-bottom: 20px; font-size: 0.9rem; border-left: 4px solid #ffeeba;">
+                <strong>⚠️ Recommendation for small payments ($10):</strong><br>
+                Please use <strong>USDT (TRC20)</strong>, <strong>LTC</strong>, or <strong>TRX</strong>.<br>
+                Avoid BTC or ETH as their network fees may exceed the payment amount.
+            </div>
 
             <form id="payForm">
                 <input type="email" id="email" placeholder="billing@example.com" required>
