@@ -119,7 +119,11 @@
                 return;
             }
 
-            fetch(`https://activation-server01.onrender.com/check-status.php?order_id=${orderId}`)
+            const cacheBuster = Date.now();
+            fetch(`https://activation-server01.onrender.com/check-status.php?order_id=${orderId}&t=${cacheBuster}`, {
+                method: 'GET',
+                headers: { 'Cache-Control': 'no-cache' }
+            })
                 .then(res => res.json())
                 .then(data => {
                     if (data.status === 'finished' && data.license_key) {
