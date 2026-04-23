@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grid Generator — Coordinate Grid Plugin for AutoCAD | Chill Engineering Tools</title>
+    <title>Chill Engineering Tools — Civil 3D Plugins</title>
     <meta name="description"
-        content="Automatically generate coordinate grids for any viewport shape in AutoCAD. One-time $10 license. Supports AutoCAD 2021-2026.">
+        content="Civil 3D automation plugins from Chill Engineering Tools. Download products and request licenses from one page.">
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -29,7 +29,7 @@
         }
 
         .container {
-            max-width: 900px;
+            max-width: 1040px;
             margin: 40px auto;
             padding: 0 20px;
         }
@@ -49,6 +49,7 @@
             justify-content: center;
             gap: 20px;
             margin-top: 30px;
+            flex-wrap: wrap;
         }
 
         .btn {
@@ -102,7 +103,60 @@
             max-width: 500px;
             margin: 0 auto;
             display: none;
-            /* Hidden by default */
+        }
+
+        .app-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 24px;
+        }
+
+        .app-card {
+            background: #ffffff;
+            padding: 24px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            border: 1px solid #dee2e6;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        .app-card h3 {
+            margin: 0;
+            color: #007bff;
+            font-size: 1.4rem;
+        }
+
+        .app-card p {
+            margin: 0;
+            color: #444;
+        }
+
+        .card-features {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            font-size: 0.95rem;
+            text-align: left;
+        }
+
+        .card-features li {
+            padding: 6px 0;
+            border-bottom: 1px solid #f1f3f5;
+        }
+
+        .card-features li:last-child {
+            border-bottom: none;
+        }
+
+        .checkout-product {
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 8px;
+            color: #007bff;
         }
 
         input[type="email"] {
@@ -128,70 +182,63 @@
 
     <header>
         <h1>Chill Engineering Tools</h1>
-        <p>Professional Automation for AutoCAD</p>
+        <p>Professional Automation for Civil 3D and AutoCAD</p>
     </header>
 
-    <div class="container" style="max-width: 800px;">
+    <div class="container">
         <div class="hero" style="margin-bottom: 30px;">
-            <h2>Grid Generator Plugin</h2>
-            <p>Create complex coordinate grids for viewports of any shape or scale in seconds. Save hours of manual
-                work.</p>
+            <h2>Civil 3D Plugins</h2>
+            <p>Choose a product below, then use Get License to open checkout for the selected application.</p>
 
-            <div class="pricing-card"
-                style="background: #ffffff; padding: 25px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border: 1px solid #dee2e6; max-width: 500px; margin: 0 auto;">
-                <h3 style="color: #007bff; margin: 0; font-size: 1.5rem;">Full Version</h3>
-                <div class="price" style="font-size: 2.5rem; font-weight: 700; color: #212529; margin: 10px 0;">$10<span
-                        style="font-size: 0.9rem; color: #6c757d; font-weight: normal;"> / Lifetime</span></div>
-
-                <div style="text-align: left; margin: 15px 0;">
-                    <ul class="features" style="list-style: none; padding: 0; margin: 0; font-size: 0.95rem;">
-                        <li style="padding: 6px 0; border-bottom: 1px solid #f1f3f5;"><strong>Single PC License</strong>
-                            — Bound to your PC (Hardware ID).</li>
-                        <li style="padding: 6px 0; border-bottom: 1px solid #f1f3f5;"><strong>Perpetual Use</strong> —
-                            No recurring subscriptions.</li>
-                        <li style="padding: 6px 0; border-bottom: 1px solid #f1f3f5;"><strong>Full Feature Set</strong>
-                            — Customizable grid settings.</li>
-                        <li style="padding: 6px 0; border-bottom: 1px solid #f1f3f5;"><strong>Instant Delivery</strong>
-                            — Key appears on screen immediately after payment.</li>
-                        <li style="padding: 6px 0;"><strong>Lifetime Support</strong> — Free v1.x updates included.</li>
+            <div class="app-grid">
+                <div class="app-card">
+                    <h3>GridGenerator</h3>
+                    <p>Create coordinate grids for viewports of any shape or scale in seconds.</p>
+                    <ul class="card-features">
+                        <li><strong>Single PC License</strong> - bound to your HWID</li>
+                        <li><strong>Perpetual Use</strong> - no recurring subscription</li>
+                        <li><strong>Production Ready</strong> - released and in use</li>
                     </ul>
+                    <div class="btn-group" style="margin-top: 8px;">
+                        <a href="#buy" class="btn btn-primary" onclick="showPayment('grid_generator')">Get License</a>
+                        <a href="https://github.com/chillengineeringtools/Releases/releases/download/v1.0.0-full/GridGeneratorSetup.exe"
+                            class="btn btn-secondary">Download v1.0</a>
+                    </div>
                 </div>
 
-                <div class="btn-group" style="display: flex; gap: 10px; margin-top: 15px;">
-                    <a href="#buy" class="btn btn-primary" onclick="showPayment()"
-                        style="flex: 1; padding: 10px; background-color: #28a745; font-size: 1rem;">Buy License</a>
-                    <a href="https://github.com/chillengineeringtools/Releases/releases/download/v1.0.0-full/GridGeneratorSetup.exe"
-                        class="btn btn-secondary"
-                        style="flex: 1; padding: 10px; background-color: #6c757d; font-size: 1rem;">Download v1.0</a>
-                </div>
-
-                <div
-                    style="margin-top: 15px; font-size: 0.85rem; color: #6c757d; border-top: 1px solid #eee; padding-top: 10px;">
-                    Interested in a trial? <a href="https://apps.autodesk.com/en"
-                        style="color: #007bff; text-decoration: none; font-weight: bold;">Get it on the Autodesk App
-                        Store</a>
+                <div class="app-card">
+                    <h3>CorridorAssist</h3>
+                    <p>Automatic corridor target assignment for Civil 3D. New product in progress.</p>
+                    <ul class="card-features">
+                        <li><strong>Target Matching</strong> - fewer repetitive clicks</li>
+                        <li><strong>Civil 3D Workflow</strong> - focused on corridor design</li>
+                        <li><strong>Coming Soon</strong> - release details will be updated</li>
+                    </ul>
+                    <div class="btn-group" style="margin-top: 8px;">
+                        <a href="#buy" class="btn btn-primary" onclick="showPayment('corridor_assist')">Get License</a>
+                        <a href="#" class="btn btn-secondary">Download</a>
+                    </div>
                 </div>
             </div>
         </div>
 
         <div id="buy" class="section payment-form">
-            <h3 style="text-align: center;">Secure Checkout</h3>
+            <h3 style="text-align: center;">Get License</h3>
+            <div id="checkoutProduct" class="checkout-product">Selected product: GridGenerator</div>
             <p style="text-align: center; font-size: 0.9rem; color: #666;">Enter your email to receive the license key.
             </p>
 
             <div
                 style="background-color: #e7f5ff; color: #1864ab; padding: 12px; border-radius: 5px; margin-bottom: 20px; font-size: 0.9rem; border-left: 4px solid #74c0fc;">
                 <strong>📋 How to Get Started</strong><br>
-                <strong>1.</strong> <a
-                    href="https://github.com/chillengineeringtools/Releases/releases/download/v1.0.0-full/GridGeneratorSetup.exe"
-                    style="color: #1864ab;">Download</a> and install the Full Version.<br>
-                <strong>2.</strong> Purchase a license key below (crypto payment).<br>
-                <strong>3.</strong> Open AutoCAD → type <strong>GRID_ACTIVATE</strong> → paste your key.
+                <strong>1.</strong> Download and install the selected product.<br>
+                <strong>2.</strong> Complete checkout below.<br>
+                <strong>3.</strong> Open AutoCAD/Civil 3D and run the activation command for your product.
             </div>
 
             <form id="payForm">
                 <input type="email" id="email" placeholder="billing@example.com" required>
-                <button type="submit" class="btn btn-primary" id="payBtn" style="width: 100%;">Pay $10</button>
+                <button type="submit" class="btn btn-primary" id="payBtn" style="width: 100%;">Get License</button>
                 <div id="error" style="color: red; text-align: center; margin-top: 10px; display: none;"></div>
             </form>
         </div>
@@ -205,7 +252,26 @@
     </div>
 
     <script>
-        function showPayment() {
+        const productCatalog = {
+            grid_generator: {
+                product_id: 'grid_generator',
+                product_name: 'Grid Generator',
+                price: 10
+            },
+            corridor_assist: {
+                product_id: 'corridor_assist',
+                product_name: 'CorridorAssist',
+                price: 10
+            }
+        };
+
+        let selectedProduct = productCatalog.grid_generator;
+
+        function showPayment(productId) {
+            if (productId && productCatalog[productId]) {
+                selectedProduct = productCatalog[productId];
+            }
+            document.getElementById('checkoutProduct').textContent = 'Selected product: ' + selectedProduct.product_name;
             document.getElementById('buy').style.display = 'block';
             document.getElementById('buy').scrollIntoView({ behavior: 'smooth' });
         }
@@ -229,9 +295,9 @@
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
                         email,
-                        product_id: 'grid_generator',
-                        product_name: 'Grid Generator',
-                        price: 10
+                        product_id: selectedProduct.product_id,
+                        product_name: selectedProduct.product_name,
+                        price: selectedProduct.price
                     })
                 });
 
@@ -251,13 +317,13 @@
                 error.textContent = 'Error: ' + err.message;
                 error.style.display = 'block';
                 btn.disabled = false;
-                btn.textContent = 'Pay $10';
+                btn.textContent = 'Get License';
             }
         });
 
-        // Auto-show payment if redirected from app
         if (window.location.search.includes('p=')) {
-            showPayment();
+            const productParam = new URLSearchParams(window.location.search).get('p');
+            showPayment(productParam || 'grid_generator');
         }
     </script>
 
